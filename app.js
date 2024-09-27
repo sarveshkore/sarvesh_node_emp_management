@@ -1,5 +1,7 @@
 const express = require('express')
+var bodyParser=require('body-parser')   //middleware
 const app = express()
+app.use(bodyParser.urlencoded({extended:false}))
 app.use(express.json()); 
 // app.get('/', function (req, res) {
 // //   res.send('Hello World')
@@ -49,6 +51,15 @@ app.post('/employee',(req,res)=>{
     console.log(input);
     res.send(input);
 });
+
+
+
+
+
+
+
+
+
 
 
 app.listen(9998,()=>{
